@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial scale=1">
+</head>
+<style>
+
+
+head,body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	font-family: arial;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.container{
+	width: 100%;
+	overflow: hidden;
+	height: 800px;
+
+	background-image: url("background4.jpg");
+
+    /* Full height */
+   
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	
+}
+.first{
+	width: 100%;
+	height: 300px;
+
+}
+.second{
+	width: 100%;
+	height:400px;
+	    background-color: #c3c3c3;
+}
+.line{
+	width:100%;
+	height: 400px;
+	margin: 0px auto;
+}
+.round1{
+	    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin: 100px auto;
+}
+.btechyear{
+	height: 400px;
+	width: 33%;
+	position: absolute;
+	top: 500px;
+	left: 16.5%;
+	background-color: grey;
+	text-align: center;
+	transition: .5s ease;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+
+}
+.mtechyear{
+	height: 400px;
+	width: 34%;
+	position: absolute;
+    top: 500px;
+    right: -17%;
+	background-color: grey;
+	text-align: center;
+
+	transition: .5s ease;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+}
+
+
+.btech:hover .round1{
+	opacity: 0.3;
+}
+.btech:hover .btechyear{
+	opacity:1;
+		background-color: #000000c9;
+}
+.mtech:hover .round1{
+	opacity: 0.3;
+}
+.mtech:hover .mtechyear{
+	opacity:1;
+	background-color: #000000c9;
+}
+#b1{
+text-decoration: none;
+    /* position: absolute; */
+    margin: 100px auto;
+    background-color: #4c4c4c00;
+    border: 2px solid #ffffff;
+    border-radius: 16px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+   
+    cursor: pointer;
+     margin: 17px 0px 0px 0px;
+}
+#b1:hover {
+    border: 4px solid white;
+    background-color: white;
+    color: green;
+}
+#b2{
+    text-decoration: none;
+    background-color: #505050;
+    width: 200px;
+    height: 200px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+    margin: 100px auto;
+    color: white;
+}
+#b2:hover {
+   
+    background-color: white;
+    color: green;
+}
+input[type=submit]{
+   background-color: #4CAF50;
+     border: none;
+      color: white;
+     padding: 16px 32px;
+     text-decoration: none;
+        margin: 17px 0px 0px 20px;
+     cursor: pointer;
+      border-radius: 10px;
+     font-size: large;
+  }
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.b{
+	margin: 75px;
+}
+.a{
+	margin: 25px;
+}
+.details{
+		
+    background-color: #b5b5b5;
+    margin-top: 5%;
+	    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    max-height: 500px;
+	
+}
+.forms{
+		    
+    padding: 25px;
+    height: 450px;
+    overflow-y: auto;
+	}
+	input[type=text] {
+   	 width: 100%;
+  	  padding: 12px 20px;
+ 	   margin: 8px 0;
+  	  box-sizing: border-box;
+  	  border: 3px solid #fff;
+  	  -webkit-transition: 0.5s;
+  	  transition: 0.3s;
+  	  outline: none;
+	color: #656565;
+	}
+input[type=value]{
+
+	width: 100%;
+  	  padding: 12px 20px;
+ 	   margin: 8px 0;
+  	  box-sizing: border-box;
+  	  border: 3px solid #fff;
+  	  -webkit-transition: 0.5s;
+  	  transition: 0.3s;
+  	  outline: none;
+	color: #656565;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	 background-repeat: repeat;
+		box-shadow:0px 3px 150px 0px #060e0e;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    margin: 0px auto;
+    padding-top: 1px;
+    /* border: 1px solid #fff; */
+    width: 40%;
+    border-radius: 20px;
+    height: 560px;
+    text-align: center;
+    font-family: arial;
+    font-size: 40px;
+    font-weight: 600;
+    color: #5d5c5c;
+    box-shadow: 0px 3px 150px 0px #060e0e;
+}
+
+</style>
+<body>
+	<div class="container">
+		<div class="first">
+				<p style="    margin: 0px; font-family: arial;font-size: 57px; text-align: center;padding-top: 4%;color: #3a3a3a;font-weight: bold;">Computer Science Department<br>Student Details</p>
+		</div>
+		<div class="second">
+			
+			<div class="line">
+				<div class="btech" style="float: left;width: 33%;height: 100%">
+					<div class="round1">
+						<p style="text-align: center;
+    margin-top: 38%;
+    font-size: 33px;">Btech</p>
+					</div>
+					<div class="btechyear">
+		<div class="a">
+			<a href="sudents.html"><input type="submit" name="First Year" id="b1" value="First Year"></a>
+		</div>
+		<div class="a">
+			<input type="submit" name="First Year" id="b1" value="Second Year">
+		</div>
+		<div class="a">
+			<input type="submit" name="First Year" id="b1" value="Third Year">
+		</div>
+		<div class="a">
+			<input type="submit" name="First Year" id="b1" value="Forth Year">
+		</div>
+	</div>	
+				</div>
+				<div class="add" style="float: left;width: 33%;height: 100%;background-color: #c3c3c3;text-align: center;">
+					<div>
+						<input type="submit" name="First Year" id="b2" value="Add">
+					</div>
+				</div>
+				<div class="mtech" style="float: left;width: 33%;height: 100%">
+					<div class="round1">
+						<p style="text-align: center;
+    margin-top: 38%;
+    font-size: 33px;">Mtech</p>
+					</div>
+					<div class="mtechyear">
+		<div class="b">
+			<input type="submit" name="First Year" id="b1" value="First Year">
+		</div>
+		<div class="b">
+			<input type="submit" name="First Year" id="b1" value="Second Year">
+		</div>
+	</div>
+	
+				</div>	
+			</div>		
+		</div>
+		<div>
+		<p style="text-align: center;">Department of Computer science</p>
+	</div>
+	</div>
+	<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    		
+		<div class="details"  style="float: left;">
+		<div class="forms">
+			<form>
+            <input type="radio" checked="checked" value="student" name="Category"> Boys
+        <input type="radio" value="owner" name="Category"> Girls
+				    <input type="text" id="fname" name="fname" placeholder="House Name">
+
+ 	       		<input type="text" id="fname" name="fname" placeholder="Street Name">
+
+ 	       		<input type="text" id="fname" name="fname" placeholder="Place">
+				    <input type="text" id="fname" name="fname" placeholder="Town">
+				    <input type="text" id="fname" name="fname" placeholder="City">
+			     	<input type="value" id="password" name="pass" placeholder="Pin Code">
+				    <input type="value" id="password" name="pass" placeholder="Rate">
+            <input type="text" id="fname" name="fname" placeholder="No of available beds">
+            <input type="submit" name="register" value="Submit">
+			</form>
+		</div>
+	
+	</div>	
+	</div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("b2");
+
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function(e) {
+	e.preventDefault();
+    modal.style.display = "block";
+}
+
+
+
+
+window.onclick = function(event) {
+   if (event.target == modal) {
+        modal.style.display = "none";
+   }
+}
+</script>		
+</body>
+</html>
